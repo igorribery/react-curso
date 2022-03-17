@@ -1,8 +1,9 @@
 const App = () => {
+    let name: string = 'Igor';
+    let lastName: string = 'Ribeiro';
+  
   return (
-    <div>
-      Opa, tudo bem?
-    </div>
+    <div>Soma: {`${name} ${lastName}`} </div>
   );
 }
 
