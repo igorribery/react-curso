@@ -1,12 +1,12 @@
-const App = () => {
-    let link: string = 'https://b7web.com.br';   
+import { Header } from './components/Header';
+
+
+const App = () => {  
 
   return (    
     <div>
-
-    Link para o site: <br/>
-    <a href={link}>Clique aqui para acessar</a>
-
+      <Header />
+      Olá Mundo
     </div>
   );
 }
