@@ -1,9 +1,13 @@
 const App = () => {
-    let name: string = 'Igor';
-    let lastName: string = 'Ribeiro';
-  
-  return (
-    <div>Soma: {`${name} ${lastName}`} </div>
+    let link: string = 'https://b7web.com.br';   
+
+  return (    
+    <div>
+
+    Link para o site: <br/>
+    <a href={link}>Clique aqui para acessar</a>
+
+    </div>
   );
 }
 
