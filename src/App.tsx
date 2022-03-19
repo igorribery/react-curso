@@ -1,14 +1,17 @@
+import { useState } from 'react';
+
 const App = () => {  
+  const [name, setName] = useState('Bonieky');
 
   const handleClick = () => {
-    alert('O botão foi clicado!');
+    setName('Pedro');
   }
 
 
   return (    
     <div>
+      meu nome é {name}.
       <button onClick={handleClick}>Clique Aqui</button>
-
     </div>
   );
 }
