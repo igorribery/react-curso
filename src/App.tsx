@@ -1,45 +1,20 @@
-import { useState } from "react";
+import { Botao } from './components/Botao';
 
-type HandleInputChange = React.ChangeEvent<HTMLInputElement>;
+const App = () => {  
+  let textoDoBotao = 'Clicar no Botão';
 
-const App = () => {
-
-  const [name, setName] = useState('João');
-  const [lastName, setLastName] = useState('Silva');
-  const [age, setAge] = useState(18);
-
-  const handleName = (e: HandleInputChange) => {
-    setName( e.target.value );
+  const botaoEventAction = (txt: string) => {
+    alert('Frase do App: '+txt);
   }
-  const handleLast = (e: HandleInputChange) => {
-    setLastName( e.target.value );
-  }
-  const handleAge = (e: HandleInputChange) => {
-    setAge( parseInt(e.target.value ));
-  }
+
   return (
     <div>
-      <div>
-        Nome:
-        <input type="text" value={name} onChange={handleName} />
-      </div>
+    <Botao text={textoDoBotao} clickFn={botaoEventAction} />
 
-      <div>
-        Sobrenome:
-        <input type="text" value={lastName} onChange={handleLast} />
-      </div>
-
-      <div>
-        Idade:
-        <input type="text" value={age} onChange={handleAge} />
-      </div>
-
-      <hr/>
-
-      Olá {`${name} ${lastName}`}, tudo bem?<br/>
-      Você tem {age} anos.
     </div>
   );
+
 }
+
 
 export default App;
