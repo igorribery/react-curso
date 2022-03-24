@@ -1,17 +1,11 @@
-import * as C from './AppStyles';
-
 const App = () => {
   
   return (
-    <C.Container>
-      <span>Texto do componente.</span>
+    <div className='bg-blue-700 text-white p-3 w-auto font-bold'>
+      Texto qualquer
 
-      <a href="" className='Link'>Link qualquer</a>
-
-
-      <C.Botaocss bg='#FF0000' small>Botão grande</C.Botaocss>
-      <C.Botaocss bg='#00FF00' small>Botão pequeno</C.Botaocss>
-    </C.Container>
+    <button className='bg-green-400 px-2 ml-4 rounded-xl'>Clique Aqui</button>
+    </div>
   );
 }
 
