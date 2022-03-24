@@ -1,14 +1,12 @@
 import { useState } from "react";
-import './styles.css';
+import { Botao } from './components/Botao/index';
 
 const App = () => {
   
-  const handleClick = () => {
-    
-  }
+  
   return (
     <div>
-      <button className='botao' onClick={handleClick}>Clique Aqui</button>
+    <Botao />
     </div>
   );
 
