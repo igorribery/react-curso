@@ -3,12 +3,12 @@ interface Props {
     clickFn: (txt: string) => void;
 }
 
-
 export const Botao = ({ text, clickFn }: Props) => {
 
     const handleClick = () => {
-        clickFn('FRASE');
+        clickFn('FRASE!!!');
     }
+
     return (
         <button onClick={handleClick}>{text}</button>
     );

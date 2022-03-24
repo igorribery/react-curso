@@ -1,24 +1,21 @@
 import { useState } from "react";
 
-const App = () => {  
-  const [show, setShow] = useState(false);
-  
+
+const App = () => {
+  const [padding, setPadding] = useState(5);
+
   const handleClick = () => {
-    setShow ( !show );
+    setPadding(20);
   }
+  return (
+    <div>
+      <button onClick={handleClick} 
+      style={{
+        backgroundColor: '#FF0000', color: '#FFF', border: '0', padding: padding}}>Clique Aqui</button>
+    </div>
+  );
 
- return (
-   <div>
-     <button onClick={handleClick}>{show ? 'Ocultar' : 'Mostrar'}</button>
 
-      {show &&
-
-     <div>
-       Texto qualquer...
-     </div>
-}
-   </div>
- )
 }
 
 export default App;
