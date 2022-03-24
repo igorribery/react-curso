@@ -1,13 +1,35 @@
 import styled from "styled-components";
 
-interface ContainerProps {
-    bgColor: string;
-}
+export const Container = styled.div`
+    max-width: 600px;
+    margin: auto;
 
-export const Container = styled.div<ContainerProps>`
-background-color: ${props => props.bgColor};
-color: white;
-padding: 20px
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    
+    span {
+        font-weight: bold;
+        color: #000;
+    }
+
+    .link {
+        color: #FFF;
+
+        &:hover {
+            color: #FF0000;
+        }
+    }
+
+    @media (max-width: 500px) {
+        background-color: green;
+        flex-direction: column;
+
+        span {
+            color: #FF0000;
+        }
+    }
+
 `;
 
 interface BotaocssProps {
@@ -16,7 +38,7 @@ interface BotaocssProps {
 }
 
 export const Botaocss = styled.button<BotaocssProps>`
-font-size: ${props => props.small ? '15px' : '30px' };
-background-color: ${props => props.bg};
-margin-left: 10px;
+    font-size: ${props => props.small ? '10px' : '20px'};
+    background-color: ${props => props.bg};
+    padding: 20px;
 `;
