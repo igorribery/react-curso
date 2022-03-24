@@ -1,16 +1,15 @@
-import { Container } from "./components/Container";
-import { Botaocss } from "./components/Botaocss";
+// import { Container, Botaocss } from './AppStyles';  // importando individualmente
+import * as C from './AppStyles'; // importa tudo de uma vez (maneira mais fácil)
 
 const App = () => {
   
   return (
     
-    <Container>
+    <C.Container>
       Texto do componente.
-      <Botaocss>Clique aqui</Botaocss>
-    </Container>
+      <C.Botaocss>Clique aqui</C.Botaocss>
+    </C.Container>
   );
-
 }
 
 export default App;
