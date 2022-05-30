@@ -1,13 +1,28 @@
-const App = () => {
-  
-  return (
-    <div className='bg-blue-300 p-5'>
-      <input 
-      className="outline-none border border-transparent bg-white p-3 rounded focus:ring-2 focus:ring-blue-500"
-      type='text' 
-      placeholder="Digite alguma coisa" />
+import { ChangeEvent, useEffect, useState } from "react";
 
-    <button className='ml-2 p-3 bg-blue-400 rounded text-white font-bold hover:bg-blue-500'>Clique Aqui</button>
+const App = () => {
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [fullName, setFullName] = useState('');
+
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setName (e.target.value);
+  }
+  
+  const handleLastName = (e: ChangeEvent<HTMLInputElement>) => {
+    setLastName (e.target.value);
+  }
+
+  useEffect(() => {
+    setFullName(`${name} ${lastName}`)
+  }, [name, lastName]);
+
+
+  return (
+    <div className="flex flex-col">
+      <input type="text" placeholder="Digite seu NOME" value={name} onChange={handleNameChange} />
+      <input type="text" placeholder="Digite seu SOBRENOME" value={lastName} onChange={handleLastName} />
+      <p>Nome Completo: {fullName}</p>
     </div>
   );
 }
